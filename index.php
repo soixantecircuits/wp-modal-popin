@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: wp-modal-popin
+Plugin Name: WP-Modal-Popin
 Plugin URI: http://soixantecircuits.fr
 Description: Add tinymce button for [modal window]
 Version: 1.0
