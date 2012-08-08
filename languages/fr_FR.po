@@ -1,0 +1,75 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: modal-box\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-07-20 01:24+0100\n"
+"PO-Revision-Date: 2012-07-20 09:07+0100\n"
+"Last-Translator: Gabriel Delattre <gabriel@soixantecircuits.fr>\n"
+"Language-Team: Soixante circuits <contact@soixantecircuits.fr>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _e;gettext;gettext_noop;__\n"
+"X-Poedit-Basepath: /Users/gabrielstuff/Sites/asso-ela/wp-content/plugins/wp-modal-box\n"
+"Plural-Forms: %s\n"
+"X-Poedit-Language: french\n"
+"X-Poedit-Country: France\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: inc/class.admin.php:16
+msgid "Modal Box"
+msgstr ""
+
+#: inc/class.admin.php:18
+msgid "You can put any kind of content. Please use short code iframe to embed iframe."
+msgstr "Vous pouvez inscrire tous les types de contenus. S'il vous plait utilisez un code Shortcode pour ajouter une iframe."
+
+#: inc/class.admin.php:20
+msgid "ex: [iframe src=\"http://player.vimeo.com/video/3261363\" width=\"100%\" height=\"620\"]"
+msgstr ""
+
+#: inc/class.admin.php:22
+msgid "Please enter the name of the button link: "
+msgstr "S'il vous plaît entrez le nom du bouton ou du lien"
+
+#: inc/class.admin.php:23
+msgid "a button name"
+msgstr "nom du bouton"
+
+#: inc/class.admin.php:24
+msgid "Please enter the title of the window: "
+msgstr "Veuillez entrer le titre de la fenêtre modale."
+
+#: inc/class.admin.php:25
+msgid "a title"
+msgstr "un titre"
+
+#: inc/class.admin.php:26
+msgid "Please enter the text that should fit in a modal box: "
+msgstr "Inscrivez ci-dessous le texte et le code html que vous souhaitez afficher : "
+
+#: inc/class.admin.php:27
+msgid "make some magic"
+msgstr "Faire de la magie !"
+
+#: inc/class.admin.php:42
+msgid "Insert the box"
+msgstr "Ajouter"
+
+#: inc/class.client.php:30
+msgid "Window"
+msgstr "Fenêtre"
+
+#: inc/class.client.php:31
+msgid "Default name"
+msgstr "Nom par défaut"
+
+#~ msgid "Write some name button"
+#~ msgstr "le nom du bouton"
+
+#~ msgid "Write some title"
+#~ msgstr "le titre"
+
+#~ msgid "L'Oréal custom contour"
+#~ msgstr "L'Oréal boite avec contours"
