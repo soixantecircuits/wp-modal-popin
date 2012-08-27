@@ -40,7 +40,10 @@ function mybutton_create_shortcode() {
     //if width value is empty;
     if (typeof width_value=="undefined" || width_value==""){width_value=850;}
     var width_unity = nl2br(jQuery('#mytmodal_width_unity').val(),false);
-    return '[modal name="'+name+'" class="'+class_+'" title="'+title+'" width_value="'+width_value+'" width_unity="'+width_unity+'"]'+content+'[/modal]';
+    var height_value = nl2br(jQuery('#mytmodal_height_value').val(),false);
+    var height_unity = nl2br(jQuery('#mytmodal_height_unity').val(),false);
+    if (typeof height_value=="undefined" || height_value==""){height_value=100;height_unity="%"}
+    return '[modal name="'+name+'" class="'+class_+'" title="'+title+'" width_value="'+width_value+'" width_unity="'+width_unity+'" height_value="'+height_value+'" height_unity="'+height_unity+'"]'+content+'[/modal]';
 }
 
 function nl2br (str, is_xhtml) {   

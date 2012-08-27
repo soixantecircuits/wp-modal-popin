@@ -28,7 +28,12 @@ class myTinyMceButtonModal_Admin{
             <select name="mytmodal_width_unity" id="mytmodal_width_unity">
                 <option value="px" selected>px</option>
                 <option value="%">%</option>
-                <option value="em">em</option>
+            </select><br/>
+            <?php _e("Please enter the height of the window: ", 'mytmodal');?><br>
+            <input style="width: 20%;" type="text" name="mytmodal_height_value" id="mytmodal_height_value" value=""/>
+            <select name="mytmodal_height_unity" id="mytmodal_height_unity">
+                <option value="px" selected>px</option>
+                <option value="%">%</option>
             </select><br/>
             <?php _e("Please enter a class you want to use to skin the button: ", 'mytmodal');?><br>
             <input style="width: 20%;" type="text" name="mytmodal_class" id="mytmodal_class" value=""/>

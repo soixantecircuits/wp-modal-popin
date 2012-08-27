@@ -48,13 +48,21 @@ class myTinyMceButtonModal_Client {
         ,"name" => __("Default name","mytmodal")
         ,"width_value"=> "850"
         ,"width_unity"=> "px"
+        ,"height_value"=> "100"
+        ,"height_unity"=>"%"
         ,"class"=> "default"
+        ,'id' => 'default'
         ), $attr)); 
         if (empty($width_value)||$width_value==""){
             $width_value=850;
+            $width_unity="px";
+        }
+        if (empty($height_value)||$height_value==""){
+            $height_value=100;
+            $height_unity="%";
         }
         $nbr_modal_window_id = uniqid (rand(), false);
-        return '<a href="#frame'.$nbr_modal_window_id.'" class="'.esc_attr($class).' a-btn modal-btn" rel="leanModal">'.esc_attr($name).'</a><div id="frame'.$nbr_modal_window_id.'" class="modal" data-widthunity="'.esc_attr($width_unity).'" data-widthvalue="'.esc_attr($width_value).'"><div class="signup-header"><h2>'.esc_attr($title).'</h2><a class="modal_close" href="#"></a></div>'. do_shortcode($content) .'</div>';
+        return '<a id = "'.esc_attr($id).'" href="#frame'.$nbr_modal_window_id.'" class="'.esc_attr($class).' a-btn modal-btn" rel="leanModal">'.esc_attr($name).'</a><div id="frame'.$nbr_modal_window_id.'" class="modal" data-widthunity="'.esc_attr($width_unity).'" data-widthvalue="'.esc_attr($width_value).'" data-heightunity="'.esc_attr($height_unity).'" data-heightvalue="'.esc_attr($height_value).'"><div class="signup-header"><h2>'.esc_attr($title).'</h2><a class="modal_close" href="#"></a></div>'. do_shortcode($content) .'</div>';
     }
 
 }
