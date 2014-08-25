@@ -1,33 +1,18 @@
 <?php
 class myTinyMceButtonModal_Client {
     
-    function cdn_jquery_scripts()
-    {
-        global $wp_scripts;
-        wp_enqueue_script( 'jquery' ); // on ajoute le script
-        $jq_version_from_wp = "1.7.2"; // on lit la version
-        $https = is_ssl() ? 's' : ''; // on vérifie si SSL est activé
-        $jq_url_from_cdn = 'http'.$https.'://ajax.googleapis.com/ajax/libs/jquery/' . $jq_version_from_wp . '/jquery.min.js'; // on crée l'url du CDN
-        $response = wp_remote_get( $jq_url_from_cdn ); // on fait une requête HTTP vers le fichier
-        if( !is_wp_error( $response ) && $response['response']['code'] != 404 ) { // si il n'est ni en erreur ni une 404 ...
-            wp_register_script( 'jquery', $jq_url_from_cdn, '', $jq_version_from_wp, true ); // on le "register" et on l'ajoute de nouveau (en footer grâce au "true")
-            wp_deregister_script( 'jquery' ); // on retire le script
-        }
-    }
-
-    function __construct() {
-        if( !is_admin() ){
-            add_action( 'wp_enqueue_scripts', 'cdn_jquery_scripts' ); 
-
-            wp_register_style(
+    function box_style(){
+        wp_register_style(
                 "style_box",
                 plugins_url( "ressources/css/style_modal.css", __FILE__ ),
                 false,
                 0.1
             );
             wp_enqueue_style( "style_box" );
+    }
 
-            wp_enqueue_script(
+    function external_script(){
+        wp_enqueue_script(
                 "jquery.leanModal.min.js",
                 plugins_url( "ressources/jquery.leanModal.min.js", __FILE__ ),
                 array('jquery'), true, true
@@ -38,6 +23,14 @@ class myTinyMceButtonModal_Client {
                 plugins_url( "ressources/leanModalapp.js", __FILE__ ),
                 array('jquery'), true, true
             );
+    }
+
+    function __construct() {
+        if( !is_admin() ){
+            add_action( 'wp_enqueue_scripts', array($this, 'box_style' ) );
+            add_action( 'wp_enqueue_scripts', array($this, 'external_script') );
+
+            
         }
         add_shortcode( 'modal', array( &$this, 'modal_shortcode' ));
     }
@@ -66,4 +59,3 @@ class myTinyMceButtonModal_Client {
     }
 
 }
-?>
